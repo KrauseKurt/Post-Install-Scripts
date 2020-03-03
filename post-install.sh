@@ -12,27 +12,6 @@ DOWNLOAD_DIR="/home/kurt/Downloads/postinstall"
 REPO_DIR="/home/kurt/Repo"
 APPIMG_DIR="/home/kurt/Appimgs"
 
-PROGRAM_LIST=(
-  git
-  tilix
-  snapd
-  htop
-  neofetch
-  virtualbox
-  tilix
-  inkscape
-  vlc
-  krita
-  gimp
-  speedtest-cli
-  mongodb
-  zsh
-  fonts-powerline
-  curl
-  gnome-tweaks
-  apt-transport-https
-)
-
 ## Remove apt locks if any
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
@@ -45,17 +24,8 @@ sudo apt update -y
 ## Update repository after 3rd-party repos have been added
 sudo apt update -y
 
-## Install .deb's downloaded prevously
-#sudo dpkg -i $DOWNLOAD_DIR/*.deb
-
-# Instalar programas no apt
-for pkg_name in ${PROGRAM_LIST[@]}; do
-  if ! dpkg -l | grep -q $pkg_name; then
-    apt install "$pkg_name" -y
-  else
-    echo "$pkg_name is already installed, skipping."
-  fi
-done
+# Instalall apt`s
+sudo apt get git tilix guake tlp tlp-rdw snapd htop neofetch virtualbox tilix inkscape vlc krita gimp speedtest-cli mongodb zsh fonts-powerline curl gnome-tweaks apt-transport-https -y
 
 ## Install flatpaks
 #flatpak install flathub com.obsproject.Studio -y
@@ -76,26 +46,16 @@ sudo snap install webstorm --classic
 sudo snap install pycharm-professional --classic
 #sudo snap install pycharm-community --classic
 sudo snap install aws-cli --classic
+sudo snap install runelite
+sudo snap install dwarf-fortress
+sudo snap install openosrs 
+sudo snap install obs-studio
+
 
 ## Manual instalations
-# Runelite
-wget -c "$URL_RUNELITE" -P "$APPIMG_DIR"
-
-# Brave
-#curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-#echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-#apt update
-#apt install brave-browser -y
 
 # Unity
 wget -c "$URL_UNITY" -P "$APPIMG_DIR"
-echo "Opening UnityHub"
-
-#Anydesk
-#wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-#echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-#apt update
-#apt install anydesk -y
 
 ## Post-install update and cleanup
 sudo apt update && sudo apt dist-upgrade -y
