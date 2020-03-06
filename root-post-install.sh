@@ -15,6 +15,9 @@ echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-st
 apt update
 apt install anydesk -y
 
+#OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ## Post-install update and cleanup
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update

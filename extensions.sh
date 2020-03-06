@@ -1,0 +1,10 @@
+https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover/
+https://extensions.gnome.org/extension/19/user-themes/
+https://extensions.gnome.org/extension/1036/extensions/
+https://extensions.gnome.org/extension/7/removable-drive-menu/
+https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+https://extensions.gnome.org/extension/1112/screenshot-tool/
+https://extensions.gnome.org/extension/905/refresh-wifi-connections/
+https://extensions.gnome.org/extension/904/disconnect-wifi/
+https://extensions.gnome.org/extension/800/remove-dropdown-arrows/
+https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/
