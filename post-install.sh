@@ -25,7 +25,7 @@ sudo apt update -y
 sudo apt update -y
 
 # Instalall apt`s
-sudo apt get git tilix guake tlp tlp-rdw snapd htop neofetch virtualbox tilix inkscape vlc krita gimp speedtest-cli mongodb zsh fonts-powerline curl gnome-tweaks apt-transport-https -y
+sudo apt install git tilix guake tlp tlp-rdw snapd htop neofetch virtualbox tilix inkscape vlc krita gimp speedtest-cli mongodb zsh fonts-powerline curl gnome-tweaks apt-transport-https gnome-session -y
 
 ## Install flatpaks
 #flatpak install flathub com.obsproject.Studio -y
