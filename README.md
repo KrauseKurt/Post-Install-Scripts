@@ -1,2 +1,2 @@
 # Post-Install-Scripts
-Scripts to run after installing stock ubuntu
+Setup scripts for pop_os post install.
