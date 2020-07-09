@@ -1,2 +1,2 @@
-# Post-Install-Scripts
-Setup scripts for pop_os post install.
+# Deprecated
+Post-Install-Scripts moved to LinuxAutoconfig repository!
